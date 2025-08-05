@@ -1,0 +1,79 @@
+[
+  {
+    "id": "1",
+    "type": "income",
+    "name": "Gehalt",
+    "description": "Monatliches Gehalt",
+    "amount": 3000,
+    "recurrence": "monthly",
+    "start_date": "2023-01-01",
+    "end_date": null,
+    "editable": false
+  },
+  {
+    "id": "2",
+    "type": "expense",
+    "name": "Miete",
+    "description": "Monatliche Mietzahlung",
+    "amount": 900,
+    "recurrence": "monthly",
+    "start_date": "2023-01-01",
+    "end_date": null,
+    "editable": false
+  },
+  {
+    "id": "3",
+    "type": "income",
+    "name": "Steuerrückzahlung",
+    "description": "Rückzahlung vom Finanzamt",
+    "amount": 1200,
+    "recurrence": "yearly",
+    "start_date": "2023-06-01",
+    "end_date": null,
+    "editable": false
+  },
+  {
+    "id": "4",
+    "type": "expense",
+    "name": "Reparatur",
+    "description": "Auto-Reparatur",
+    "amount": 450,
+    "recurrence": "once",
+    "start_date": "2023-05-01",
+    "end_date": null,
+    "editable": false
+  },
+  {
+    "id": "5",
+    "type": "expense",
+    "name": "Netflix",
+    "description": "Netflix Abonnement",
+    "amount": 5,
+    "recurrence": "monthly",
+    "start_date": "2023-07-01",
+    "end_date": "2023-09-01",
+    "editable": false
+  },
+  {
+    "id": "6",
+    "type": "expense",
+    "name": "Test Ausgaben",
+    "description": "Test Beschreibung",
+    "amount": 100,
+    "recurrence": "once",
+    "start_date": "2023-10-01",
+    "end_date": null,
+    "editable": true
+  },
+  {
+    "id": "6",
+    "type": "expense",
+    "name": "Test Ausgabeneentrag",
+    "description": "Test Beschreibung",
+    "amount": 100,
+    "recurrence": "once",
+    "start_date": "2023-10-01",
+    "end_date": null,
+    "editable": true
+  }
+]
