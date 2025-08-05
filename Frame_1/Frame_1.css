@@ -1,0 +1,174 @@
+/* Shell Bar */
+.sap-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 48px;
+  gap: 8px;
+  position: absolute;
+  width: 1920px;
+  height: 58px;
+  left: 0;
+  top: 0;
+  background: #354a5f;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Content Left */
+.base-Shell-Content-Left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  margin: 0 auto;
+  width: 215px;
+  height: 36px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Back Button */
+.base-Back-Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: "SAP-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #d1e8ff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+/* Branding */
+.base-branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 4px;
+  gap: 10px;
+  width: 60px;
+  height: 30px;
+  border-radius: 4px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  background: linear-gradient(180deg, #2ba7e7 0%, #145fad 48.96%, #274494 100%);
+}
+
+/* Page Title */
+.base-page-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  gap: 4px;
+  width: 95px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+/* Content Right */
+.base-Shell-Content-Right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 8px;
+  margin: 0 auto;
+  width: 168px;
+  height: 36px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+/* Buttons */
+.base-Button-a,
+.base-Button-b,
+.base-Button-c {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  font-family: "SAP-icons";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #d1e8ff;
+  flex: none;
+  flex-grow: 0;
+}
+
+.base-Button-a {
+  order: 0;
+}
+.base-Button-b {
+  order: 1;
+}
+.base-Button-c {
+  order: 2;
+}
+
+/* User Actions Menu */
+.base-User-Actions-Menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  order: 3;
+  flex-grow: 0;
+  position: relative;
+}
+
+.base-User-Actions-Menu .avatar {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: #f7f7f7 url("Image.png") center center/cover no-repeat;
+  border: 1px solid #ababab;
+  border-radius: 50%;
+}
