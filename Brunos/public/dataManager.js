@@ -38,31 +38,6 @@ export async function delEintragId(id, data = null) { // Diese Funktion entfernt
   return new_data;
 }
 
-export async function anzeigen(data = null) { // Diese Funktion zeigt die Daten an, die entweder übergeben oder geladen werden, sie dient zum testen anderen Funktionen
-  if (!data) {
-    data = await loadData(); // <-- richtige Initialisierung
-  }
-
-  if (!Array.isArray(data)) {
-    console.log("Daten sind nicht in Array-Form.");
-    return;
-  }
-
-  if (data.length === 0) {
-    console.log("Keine Daten zum Anzeigen.");
-    return;
-  }
-
-  if (data.length === 1) {
-    console.log("Nur ein Eintrag vorhanden.");
-  }
-
-  for (const eintrag of data) {
-    console.log(
-      `${eintrag.id} ${eintrag.type}: ${eintrag.name} ${eintrag.amount} ${eintrag.recurrence} ${eintrag.start_date} ${eintrag.end_date} ${eintrag.editable} ${eintrag.description}`
-    );
-  }
-}
 
 export async function trenneEinAusgaben(data = null) { // Diese Funktion trennt Einnahmen und Ausgaben
     if (!data) {
@@ -81,7 +56,7 @@ export async function trenneEinmalMehrmals(data = null) { // Diese Funktion tren
   const merhmals = [];
 
   for (const eintrag of data) {
-    if (eintrag.recurrence === 'once') {
+    if (eintrag.intervall === 'once') {
       einmalig.push(eintrag);
     } else {
       merhmals.push(eintrag);
@@ -104,7 +79,7 @@ export async function sortiereAmount(data = null) { // Diese Funktion sortiert d
     if (!data) {
     data = await loadData(); // <-- richtige Initialisierung
   }
-  return [...data].sort((a, b) => b.amount - a.amount);
+  return [...data].sort((a, b) => b.betrag - a.betrag);
 }
 
 // Nach neustem Datum sortieren (start_date), neueste zuerst
@@ -112,7 +87,7 @@ export async function sortiereNeueste(data = null) { // Diese Funktion sortiert 
     if (!data) {
     data = await loadData(); // <-- richtige Initialisierung
   }
-  return [...data].sort((a, b) => new Date(b.start_date) - new Date(a.start_date));
+  return [...data].sort((a, b) => new Date(b.start_datum) - new Date(a.start_datum));
 }
 
 // Nach ältestem Datum sortieren (start_date), älteste zuerst
@@ -120,5 +95,5 @@ export async function sortiereAelteste(data = null) { // Diese Funktion sortiert
     if (!data) {
     data = await loadData(); // <-- richtige Initialisierung
   }
-  return [...data].sort((a, b) => new Date(a.start_date) - new Date(b.start_date));
+  return [...data].sort((a, b) => new Date(a.start_datum) - new Date(b.start_datum));
 }
