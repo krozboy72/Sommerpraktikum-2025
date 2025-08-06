@@ -8,7 +8,8 @@
     "recurrence": "monthly",
     "start_date": "2023-01-01",
     "end_date": null,
-    "editable": false
+    "editable": false,
+    "konto": "test_konto"
   },
   {
     "id": "2",
@@ -19,7 +20,8 @@
     "recurrence": "monthly",
     "start_date": "2023-01-01",
     "end_date": null,
-    "editable": false
+    "editable": false,
+    "konto": "test_konto"
   },
   {
     "id": "3",
@@ -30,7 +32,8 @@
     "recurrence": "yearly",
     "start_date": "2023-06-01",
     "end_date": null,
-    "editable": false
+    "editable": false,
+    "konto": "test_konto"
   },
   {
     "id": "4",
@@ -41,7 +44,8 @@
     "recurrence": "once",
     "start_date": "2023-05-01",
     "end_date": null,
-    "editable": false
+    "editable": false,
+    "konto": "test_konto"
   },
   {
     "id": "5",
@@ -52,7 +56,8 @@
     "recurrence": "monthly",
     "start_date": "2023-07-01",
     "end_date": "2023-09-01",
-    "editable": false
+    "editable": false,
+    "konto": "test_konto"
   },
   {
     "id": "6",
@@ -63,7 +68,8 @@
     "recurrence": "once",
     "start_date": "2023-10-01",
     "end_date": null,
-    "editable": true
+    "editable": true,
+    "konto": "test_konto"
   },
   {
     "id": "6",
@@ -74,6 +80,7 @@
     "recurrence": "once",
     "start_date": "2023-10-01",
     "end_date": null,
-    "editable": true
+    "editable": true,
+    "konto": "test_konto"
   }
 ]
