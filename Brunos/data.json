@@ -9,7 +9,7 @@
     "start_date": "2023-01-01",
     "end_date": null,
     "editable": false,
-    "konto": "test_konto"
+    "konto": "Konto 1"
   },
   {
     "id": "2",
@@ -21,7 +21,7 @@
     "start_date": "2023-01-01",
     "end_date": null,
     "editable": false,
-    "konto": "test_konto"
+    "konto": "Konto 2"
   },
   {
     "id": "3",
@@ -33,7 +33,7 @@
     "start_date": "2023-06-01",
     "end_date": null,
     "editable": false,
-    "konto": "test_konto"
+    "konto": "Konto 1"
   },
   {
     "id": "4",
@@ -45,7 +45,7 @@
     "start_date": "2023-05-01",
     "end_date": null,
     "editable": false,
-    "konto": "test_konto"
+    "konto": "Konto 1"
   },
   {
     "id": "5",
@@ -57,7 +57,7 @@
     "start_date": "2023-07-01",
     "end_date": "2023-09-01",
     "editable": false,
-    "konto": "test_konto"
+    "konto": "Konto 1"
   },
   {
     "id": "6",
@@ -69,7 +69,7 @@
     "start_date": "2023-10-01",
     "end_date": null,
     "editable": true,
-    "konto": "test_konto"
+    "konto": "Konto 2"
   },
   {
     "id": "6",
@@ -81,6 +81,6 @@
     "start_date": "2023-10-01",
     "end_date": null,
     "editable": true,
-    "konto": "test_konto"
+    "konto": "Konto 1"
   }
 ]
