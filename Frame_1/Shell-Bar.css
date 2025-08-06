@@ -1,8 +1,9 @@
 /* Shell Bar */
+
 .sap-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; /* уже есть, оставьте */
   align-items: center;
   padding: 4px 48px;
   gap: 8px;
@@ -19,17 +20,17 @@
 .base-Shell-Content-Left {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start; /* изменено */
   align-items: center;
   padding: 0;
   gap: 8px;
-  margin: 0 auto;
   width: 215px;
   height: 36px;
   flex: none;
   order: 0;
   flex-grow: 0;
 }
+
 
 /* Back Button */
 .base-Back-Button {
@@ -58,18 +59,20 @@
 .base-branding {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: row;
   align-items: center;
-  padding: 3px 4px;
-  gap: 10px;
+  vertical-align: middle;
+  padding: 0; /* было 3px 4px, замените на 0 */
+  gap: 0;     /* было 10px, замените на 0 */
   width: 60px;
-  height: 30px;
+  height: 36px;
   border-radius: 4px;
   flex: none;
   order: 1;
   flex-grow: 0;
   background: linear-gradient(180deg, #2ba7e7 0%, #145fad 48.96%, #274494 100%);
 }
+
 
 /* Page Title */
 .base-page-title {
@@ -78,8 +81,8 @@
   align-items: center;
   padding: 0 10px;
   gap: 4px;
-  width: 95px;
-  height: 36px;
+  width: auto;      /* было 95px, замените на auto */
+  height: 36px;     /* совпадает с .base-branding */
   border-radius: 4px;
   font-family: "Roboto";
   font-style: normal;
@@ -92,21 +95,75 @@
   flex-grow: 0;
 }
 
+/* ...existing code... */
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  background: #354a5f;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  padding: 8px 0;
+  z-index: 10;
+  margin-top: 0;
+}
+
+/* ...existing code... */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+/* ...existing code... */
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: #2ba7e7;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* ...existing code... */
+
 /* Content Right */
 .base-Shell-Content-Right {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end; /* изменено */
   align-items: center;
   padding: 0;
   gap: 8px;
-  margin: 0 auto;
+  /* Удалите margin: 0 auto; */
   width: 168px;
   height: 36px;
   flex: none;
   order: 2;
   flex-grow: 0;
 }
+/* ...existing code... */
 
 /* Buttons */
 .base-Button-a,
