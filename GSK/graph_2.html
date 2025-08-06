@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stacked Balkendiagramm</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div style="width: 700px; margin: auto;">
+    <canvas id="stackedBarChart"></canvas>
+  </div>
+
+  <script>
+    // Daten für die Monate
+    const labels = ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
+
+    // Umsatz = Gewinn + Kosten
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Gewinn',
+          data: [25000, 30000, 20000, 22000, 28000, 32000, 27000, 30000, 31000, 29000, 27000, 26000], // Beispielwerte für Gewinn
+          backgroundColor: '#5899DA', // Blau für Gewinn
+        },
+        {
+          label: 'Kosten',
+          data: [15000, 12000, 18000, 14000, 16000, 19000, 17000, 20000, 21000, 19000, 18000, 17000], // Beispielwerte für Kosten
+          backgroundColor: '#E8743B', // Orange für Kosten
+        },
+      ]
+    };
+
+    const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom', // Legende unten
+        },
+        tooltip: {
+          callbacks: {
+            label: function (context) {
+              return context.dataset.label + ': ' + context.raw.toLocaleString('de-DE') + ' €'; // Tausendertrennzeichen
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          title: {
+            display: true,
+            text: 'Monate',
+          },
+          grid: {
+            drawOnChartArea: false, // Deaktiviert vertikale Gridlines
+          },
+          categoryPercentage: 0.7, // Reduktion des Platzes für Kategorien
+          barPercentage: 0.9, // Kontrolliert die Breite der Balken
+        },
+        y: {
+          stacked: true,
+          title: {
+            display: true,
+            text: 'Beträge (€)',
+          },
+          ticks: {
+            callback: function (value) {
+              return value.toLocaleString('de-DE') + ' €'; // Tausendertrennzeichen
+            },
+          },
+          grid: {
+            drawBorder: false, // Entfernt den Achsenrahmen
+            color: '#e0e0e0', // Farbe der horizontalen Gridlines
+          },
+        }
+      }
+    };
+
+    // Balkendiagramm erstellen
+    const ctx = document.getElementById('stackedBarChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options,
+    });
+  </script>
+</body>
+</html>
