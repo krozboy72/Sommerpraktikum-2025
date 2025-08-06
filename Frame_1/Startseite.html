@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAP Shell Bar</title>
     <link rel="stylesheet" href="Startseite.css" />
-    <!-- Подключение SAP Icons -->
+    <!-- SAP Icons -->
     <link rel="stylesheet" href="https://ui5.sap.com/resources/sap/ui/core/themes/base/SAP-icons.css" />
     <style>
         .icon,
@@ -35,7 +35,7 @@
                 <img src="sap_logo.png" alt="SAP Logo" class="sap-logo" width="60" height="30" />
             </div>
             <div class="base-page-title dropdown">
-                <span class="title-text">Situation</span>
+                <span class="title-text">Startseite</span>
                 <span class="arrow">&#xe1ef;</span>
                 <ul class="dropdown-menu">
                     <li><a href="#">Startseite</a></li>
@@ -67,56 +67,52 @@
     <!-- Shell Bar End -->
     <!-- First Block Beginn -->
 
-   <div class="main-content">
-  <div class="account-summary">
-    <div class="greeting">Hallo, {Kunde}</div>
-    <div class="balance-row">
-      <div class="balance">
-        Der Kontostand beträgt <span class="balance-amount">20,000.10&nbsp;€</span>
-      </div>
-      <button class="add-btn">Hinzufügen</button>
+    <div class="main-content">
+        <div class="account-summary">
+            <div class="greeting">Hallo, {Kunde}</div>
+            <div class="balance">Der Kontostand beträgt <span class="balance-amount">20,000.10&nbsp;€</span></div>
+            <div class="activity-title">Letzte Aktivität</div>
+            <div class="activity-table-wrapper">
+                <table class="activity-table">
+                    <thead>
+                        <tr>
+                            <th>Bezeichnung</th>
+                            <th>Datum</th>
+                            <th>Betrag (EUR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jologa</td>
+                            <td>11.05.2021</td>
+                            <td class="plus">+ 12,600.16</td>
+                        </tr>
+                        <tr>
+                            <td>Exotic Liquids</td>
+                            <td>09.05.2021</td>
+                            <td class="minus">- 4,999.98</td>
+                        </tr>
+                        <tr>
+                            <td>Lyngbysild</td>
+                            <td>08.05.2021</td>
+                            <td class="minus">- 2,100</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="software-panel">
+            <button class="add-btn">Hinzufügen</button>
+            <div class="software-title">Entdecke {Name_unserer_Software}!</div>
+            <div class="software-buttons">
+                <button class="software-btn">Verwalten</button>
+                <button class="software-btn">ERP</button>
+                <button class="software-btn">Premium Support</button>
+            </div>
+        </div>
     </div>
-    <div class="activity-title">Letzte Aktivität</div>
-    <div class="activity-table-wrapper">
-      <!-- ...таблица... -->
-    </div>
-  </div>
-  <div class="software-panel">
-    <div class="software-title">Entdecke {Name_unserer_Software}!</div>
-    <div class="software-buttons">
-      <button class="software-btn">Verwalten</button>
-      <button class="software-btn">ERP</button>
-      <button class="software-btn">Premium Support</button>
-    </div>
-  </div>
-</div>
-            <thead>
-                <tr>
-                    <th>Bezeichnung</th>
-                    <th>Datum</th>
-                    <th>Betrag (EUR)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Jologa</td>
-                    <td>11.05.2021</td>
-                    <td class="plus">+ 12,600.16</td>
-                </tr>
-                <tr>
-                    <td>Exotic Liquids</td>
-                    <td>09.05.2021</td>
-                    <td class="minus">- 4,999.98</td>
-                </tr>
-                <tr>
-                    <td>Lyngbysild</td>
-                    <td>08.05.2021</td>
-                    <td class="minus">- 2,100</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
+
+
     <!-- End of First Block -->
 </body>
 
