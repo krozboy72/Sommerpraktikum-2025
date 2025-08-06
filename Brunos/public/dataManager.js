@@ -56,7 +56,7 @@ export async function trenneEinmalMehrmals(data = null) { // Diese Funktion tren
   const merhmals = [];
 
   for (const eintrag of data) {
-    if (eintrag.intervall === 'once') {
+    if (eintrag.intervall === 'einmalig') {
       einmalig.push(eintrag);
     } else {
       merhmals.push(eintrag);

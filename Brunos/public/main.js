@@ -14,7 +14,10 @@ import { renderFlexibleTable } from './tableRenderer.js'
 document.addEventListener("DOMContentLoaded", async () => {
   const daten = await loadData();
   console.log(daten)
+
   const { einnahmen, ausgaben } = await trenneEinAusgaben(daten);
-    console.log(einnahmen)
-  renderFlexibleTable(einnahmen, ["name", "betrag", "start_datum", "intervall", "konto"], "tabelle1");
+
+  renderFlexibleTable(einnahmen, ["id", "name", "betrag", "intervall", "start_datum", "enddatum", "konto"], "tabelle_einnahmen");
+  renderFlexibleTable(ausgaben, ["id", "name", "betrag", "intervall", "start_datum", "enddatum", "konto"], "tabelle_ausgaben");
+  
 });
